@@ -13,7 +13,7 @@ FROM ghcr.io/ublue-os/bluefin:stable
 
 # curl in bootc-base-imagectl and place it in /usr/libexec
 # Necessary for rechunking on images not based on quay.io/fedora/fedora-bootc
-RUN curl -fsSLo /usr/libexec/bootc-base-imagectl https://gitlab.com/fedora/bootc/base-images/-/raw/main/bootc-base-imagectl?=(ref_type=heads)
+RUN curl -fsSLo /usr/libexec/bootc-base-imagectl https://gitlab.com/fedora/bootc/base-images/-/raw/main/bootc-base-imagectl
 
 ### [IM]MUTABLE /opt
 ## Some bootable images, like Fedora, have /opt symlinked to /var/opt, in order to
