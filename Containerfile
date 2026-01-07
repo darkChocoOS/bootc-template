@@ -7,9 +7,9 @@ COPY cosign.pub /files/etc/pki/containers/bootc-template.pub
 # base image - replace with the image url of whatever you want to build from
 # other options for a baseimage are:
 #    ghcr.io/ublue-os/aurora:stable
-#    ghcr.io/ublue-os/bluefin:stable
 #    quay.io/fedora/fedora-bootc:43
-FROM quay.io/fedora-ostree-desktops/silverblue:43
+#    quay.io/fedora-ostree-desktops/silverblue:43
+FROM ghcr.io/ublue-os/bluefin:stable
 
 ### [IM]MUTABLE /opt
 ## Some bootable images, like Fedora, have /opt symlinked to /var/opt, in order to
