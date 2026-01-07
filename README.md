@@ -12,7 +12,7 @@
 
 1) enter into your local repository
 
-2) generate cosign keys
+2) delete `cosign.pub` and generate cosign keys
   - with cosign
     ```bash
     # generate cosign.key and cosign.pub
