@@ -2,13 +2,14 @@ FROM scratch as ctx
 
 COPY build_files /build
 COPY system_files /files
-COPY cosign/pub /files/etc/pki/containers/<image_name>.pub
+COPY cosign/pub /files/etc/pki/containers/bootc-template.pub
 
 # base image - replace with the image url of whatever you want to build from
 # other options for a baseimage are:
 #    ghcr.io/ublue-os/aurora:stable
 #    ghcr.io/ublue-os/bluefin:stable
-FROM quay.io/fedora/fedora-bootc:43
+#    quay.io/fedora/fedora-bootc:43
+FROM quay.io/fedora-ostree-desktops/silverblue:43
 
 ### [IM]MUTABLE /opt
 ## Some bootable images, like Fedora, have /opt symlinked to /var/opt, in order to

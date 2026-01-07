@@ -41,11 +41,11 @@
 
 4) setup Containerfile
   - set base image uri
-  - set `<image_name>` to your image's name (in lowercase)
+  - set `bootc-template` to your image's name (in lowercase)
 
 5) fix signing
-  - go through system_files/etc/containers and replace all instances of `<owner_name>` with the your username or organization name in lowercase, depending on who owns the image repo. there should be 3 instances of this
-  - go to system_files/etc/containers/policy.json and replace `<image_name>` with your image's name (in lowercase)
+  - go through system_files/etc/containers and replace all instances of `darkchocoos` with the your username or organization name in lowercase, depending on who owns the image repo. there should be 3 instances of this
+  - go to system_files/etc/containers/policy.json and replace `bootc-template` with your image's name (in lowercase)
 
 6) make changes to image desc and image keywords in .github/workflows/build.yml
   - **DO NOT MAKE ANY OTHER CHANGES TO BUILD.YML**
@@ -58,12 +58,12 @@
 
 1) switch to your image
   ```bash
-  sudo bootc switch ghcr.io/<owner_name>/<image_name>
+  sudo bootc switch ghcr.io/<username/org_name>/<image_name>
   ```
   
 2) reboot
 
 3) rebase to signed image
   ```bash
-  sudo bootc switch ghcr.io/<owner_name>/<image_name>
+  sudo bootc switch ghcr.io/<username/org_name>/<image_name>
   ```
